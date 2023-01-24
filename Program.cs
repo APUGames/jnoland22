@@ -38,6 +38,19 @@ namespace HangTheMan
             playerChoices[0] = "hello";
             int playerChoiceIndex = 0;
 
+            string[] guessStrings = new string[5]
+            {
+                "hamburger",
+                "fries",
+                "shake",
+                "pepsi",
+                "cake"
+            };
+            Console.WriteLine(guessStrings[0]);
+
+            guessStrings[1] = "donut";
+            Console.WriteLine(guessStrings[1]);
+
             // Console.WriteLine("Your total score is " + totalScore);
 
             string playerInput;
