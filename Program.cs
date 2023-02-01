@@ -4,8 +4,9 @@
  * Purpose: Class 1 C# concepts
  */
 using System;
+using WackyStudios;
 
-namespace HangTheMan
+namespace CSharpHelloWorld415
 {
     public class Program
     {
@@ -15,6 +16,58 @@ namespace HangTheMan
             {
                 return generalScore + bonusScore;
             }
+
+            bool IsEqual(char[] charArray, string stringArray)
+            {
+                for (int index = 0; index < charArray.Length; index++)
+                {
+                    if (stringArray[index] == charArray[index])
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            Console.WriteLine("Hello World!");
+
+            // char[] helloCharArray = { 'h', 'e', 'l', 'o', 'o' };
+            string helloString = "helo";
+            // char[] helloCharArray = helloString.ToCharArray();
+            char[] helloCharArray = new char[helloString.Length];
+            for (int index = 0; index < helloCharArray.Length; index++)
+            {
+                helloCharArray[index] = helloString[index];
+            }
+
+            string? playerInput = Console.ReadLine();
+
+            if (playerInput != null && playerInput != "")
+            {
+                char playerCharChoice = playerInput[0];
+                Console.WriteLine(playerCharChoice);
+            }
+
+            Console.WriteLine(helloString[1]);
+
+            if (IsEqual(helloCharArray, helloString))
+            {
+                Console.WriteLine("It is the cheese.");
+            }
+            else
+            {
+                Console.WriteLine("No equals");
+            }
+
+            Person person1 = new Person();
+            int someAge = 33;
+            person1.SetAge(someAge);
+            Console.WriteLine(person1.SayAge());
 
             // Variables needed in Main
             string gameOver = "true";
@@ -53,7 +106,6 @@ namespace HangTheMan
 
             // Console.WriteLine("Your total score is " + totalScore);
 
-            string playerInput;
             // Console.WriteLine("Welcome to Hang the " + playerInput);
 
             // This will not be compiled
